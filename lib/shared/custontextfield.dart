@@ -3,18 +3,27 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'package:flutter/material.dart';
+
 class Mytextfield extends StatelessWidget {
-  const Mytextfield({super.key});
+  final TextInputType textInputType;
+  final bool isPassword;
+  final String hintText;
+
+  const Mytextfield({
+    Key? key,
+    required this.textInputType,
+    required this.isPassword,
+    required this.hintText,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const TextField(
-      keyboardType: TextInputType.text,
-      obscureText: true,
-
+    return TextField(
+      keyboardType: textInputType,
+      obscureText: isPassword,
       decoration: InputDecoration(
-        hintText: "Enter Your Password: ",
-// To delete borders
+        hintText: hintText,
         enabledBorder: OutlineInputBorder(
           borderSide: BorderSide(color: Colors.grey),
         ),

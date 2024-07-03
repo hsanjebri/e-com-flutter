@@ -1,13 +1,13 @@
-import 'package:ecom/pages/register.dart';
 import 'package:ecom/shared/custontextfield.dart';
 import 'package:flutter/material.dart';
 
 import '../shared/colors.dart';
+import 'login.dart';
 
 
 
-class Login extends StatelessWidget {
-  const Login({super.key});
+class Register extends StatelessWidget {
+  const Register({super.key});
 
 
   @override
@@ -25,7 +25,14 @@ class Login extends StatelessWidget {
                 child: Mytextfield(
                   textInputType: TextInputType.emailAddress,
                   isPassword: false,
-                  hintText: "Enter your email",
+                  hintText: "Enter your user name",
+                ),
+              ),         const Padding(
+                padding: EdgeInsets.symmetric(horizontal :33.0, vertical: 16.0),
+                child: Mytextfield(
+                  textInputType: TextInputType.emailAddress,
+                  isPassword: false,
+                  hintText: "Enter your user email",
                 ),
               ),
               const Padding(
@@ -50,12 +57,14 @@ class Login extends StatelessWidget {
                 children: [
                   const Text("Don't have an account? ",style: TextStyle(fontSize: 18)),
                   TextButton(
-                    onPressed: () {Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Register()),
-                    );},
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (context) => Login()),
+                      );
+                    },
                     child:const  Text(
-                      'Sign in',
+                      'register in',
                       style: TextStyle(color: Colors.black,fontSize: 18),
                     ),
                   ),
