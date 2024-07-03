@@ -7,7 +7,27 @@ class  Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+        drawer: Drawer(
+          child: Column(
+            children: [
+              UserAccountsDrawerHeader(
+                accountName: Text("hassanjebri@gmail.com"),
+                accountEmail: Text("hassan jebri"),
+                currentAccountPicture: CircleAvatar(
+                  backgroundImage: AssetImage("assets/img/hsan.jpg"), // Replace with your image path
+                ),
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/img/sky.jpg"),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+
+        appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 76, 141, 95),
         title: Text("Home"),
         actions: [
@@ -38,15 +58,6 @@ class  Home extends StatelessWidget {
           )
         ],
       ),
-
-
-
-
-
-
-
-
-
     ) ;
   }
 }
