@@ -7,25 +7,55 @@ class  Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: Drawer(
-          child: Column(
-            children: [
-              UserAccountsDrawerHeader(
-                accountName: Text("hassanjebri@gmail.com"),
-                accountEmail: Text("hassan jebri"),
-                currentAccountPicture: CircleAvatar(
-                  backgroundImage: AssetImage("assets/img/hsan.jpg"), // Replace with your image path
-                ),
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage("assets/img/sky.jpg"),
-                    fit: BoxFit.cover,
+      drawer: Drawer(
+        child: Column(
+          children: [
+
+                UserAccountsDrawerHeader(
+                  accountName: Text("hassanjebri@gmail.com"),
+                  accountEmail: Text("hassan jebri"),
+                  currentAccountPicture: CircleAvatar(
+                    backgroundImage: AssetImage("assets/img/hsan.jpg"), // Replace with your image path
+                  ),
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("assets/img/sky.jpg"),
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
-              ),
-            ],
-          ),
+
+                ListTile(
+                  title: Text("Home"),
+                  leading: Icon(Icons.home),
+                  onTap: () {},
+                ),
+                ListTile(
+                  title: Text("My products"),
+                  leading: Icon(Icons.add_shopping_cart),
+                  onTap: () {},
+                ),
+                ListTile(
+                  title: Text("About"),
+                  leading: Icon(Icons.help_center),
+                  onTap: () {},
+                ),
+                ListTile(
+                  title: Text("Logout"),
+                  leading: Icon(Icons.exit_to_app),
+                  onTap: () {},
+                ),
+            Spacer(), // This widget pushes the following widgets to the bottom
+            Container(
+              margin: EdgeInsets.only(bottom: 30),
+              child: Text("Developed by  Hassan jebri © 2024",
+                  style: TextStyle(fontSize: 16)),
+            )
+
+          ],
+
         ),
+      ),
 
         appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 76, 141, 95),
