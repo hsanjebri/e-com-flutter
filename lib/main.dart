@@ -1,3 +1,4 @@
+import 'package:ecom/pages/details.dart';
 import 'package:ecom/pages/home.dart';
 import 'package:ecom/pages/login.dart';
 import 'package:ecom/pages/register.dart';
