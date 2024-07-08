@@ -1,19 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../models/Item.dart';
-
 class Details extends StatefulWidget {
-    Item product ;
-   Details({required this.product});
+  const Details({super.key});
 
   @override
   _DetailsState createState() => _DetailsState();
 }
 
 class _DetailsState extends State<Details> {
-
-
   bool isShowMore = false;
 
   @override
@@ -21,19 +16,20 @@ class _DetailsState extends State<Details> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green[700], // Adjusted background color
-        title: Text("Details Screen",style: TextStyle(color: Colors.white)),
+        title: Text("Details Screen"),
         actions: [
           Stack(
+            alignment: Alignment.center,
             children: [
               Container(
-                padding: EdgeInsets.all(6),
+                padding: EdgeInsets.all(5),
                 decoration: BoxDecoration(
-             //     color: Colors.green[400], // Adjusted color for badge
-                  shape: BoxShape.circle,
+                  color: Colors.green[400], // Adjusted color for badge
+                  shape: BoxShape.rectangle,
                 ),
                 child: Text(
                   "8",
-                  style: TextStyle(color: Colors.black,fontSize: 15),
+                  style: TextStyle(color: Colors.black),
                 ),
               ),
               IconButton(
@@ -57,15 +53,14 @@ class _DetailsState extends State<Details> {
           children: [
             Center(
               child: Image.asset(
-               widget.product.imgPath,
+                "assets/img/hsan.jpg",
                 width: 200, // Adjusted image width
               ),
             ),
             SizedBox(height: 16),
             Center(
               child: Text(
-                "\$ ${                widget.product.price
-                  }",
+                "\$12.99",
                 style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
               ),
             ),
@@ -98,7 +93,7 @@ class _DetailsState extends State<Details> {
                 Row(
                   children: [
                     Icon(Icons.location_on, size: 24, color: Colors.green),
-                    Text(" Mytek", style: TextStyle(fontSize: 18)),
+                    Text(" Flower Shop", style: TextStyle(fontSize: 18)),
                   ],
                 ),
               ],

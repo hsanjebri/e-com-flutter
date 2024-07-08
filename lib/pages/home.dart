@@ -29,7 +29,7 @@ class _HomeState extends State<Home> {
                     ),
                     padding: EdgeInsets.all(5),
                     decoration: const BoxDecoration(
-                      color: Color.fromARGB(211, 164, 255, 193),
+                    //  color: Color.fromARGB(211, 164, 255, 193),
                       shape: BoxShape.rectangle,
                     ),
                   ),
@@ -137,7 +137,7 @@ class _HomeState extends State<Home> {
                     icon: Icon(Icons.add),
                   ),
                   leading: Text("\$${item.price}"),
-                  title: Text(""),
+                  title: Text("aaa"),
                 ),
               ),
             );
